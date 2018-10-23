@@ -31,18 +31,21 @@ DIRECTORY STRUCTURE
       vendor/             contains dependent 3rd-party packages
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
-
+      
+gitHub desktop
+clond / bsc
 
 
 REQUIREMENTS
 ------------
 
 The minimum requirement by this project template that your Web server supports PHP 5.4.0.
-
+ลง xampp php7 ได้เลย
 
 INSTALLATION
 ------------
 
+ลงcomposer
 ### Install via Composer
 
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
@@ -107,6 +110,8 @@ You can then access the application through the following URL:
 
 CONFIGURATION
 -------------
+sql สร้างฐานข้อมูล bsc
+yii migrate/fresh
 
 ### Database
 
