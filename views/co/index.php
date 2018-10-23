@@ -18,10 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<?php //print_r()?>
-<?php//= $_SERVER["DOCUMENT_ROOT"].'/data/contact/' ?>
+<?php //var_dump($models)?>
+<?php// $_SERVER["HTTP_HOST"] ?>
 <?php//= $_SERVER["HTTP_HOST"].'/data/contact/' ?>
-<?=Url::to('@webroot/uploads/contact/');?>
+<?php //Url::to('@web/uploads/contact/');?>
 <?php 
 $json = '';
 $json = Json::encode($models);
@@ -54,9 +54,6 @@ $jsonDe = Json::decode($json);
 		</ul>
 	</div>
 </div>
-<div align="right">
-				<button type="button" name="add" id="add" class="btn btn-info">Add</button>
-			</div>
 <div>
     <!-- widget grid -->
 	<section id="widget-grid" class="">

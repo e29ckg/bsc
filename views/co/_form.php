@@ -35,7 +35,6 @@ use yii\helpers\Url;
     'inputOptions' => [
         'placeholder' => $model->getAttributeLabel('name')
     ],
-    'enableAjaxValidation' => true,
     'template' => '<section class=""><label class="label">{label}</label> <label class="input"> <i class="icon-append fa fa-user"></i>{input}<b class="tooltip tooltip-top-right">กรอกชื่อ</b></label><em for="name" class="invalid">{error}{hint}</em></section>'
     ])->label(false);
     ?>

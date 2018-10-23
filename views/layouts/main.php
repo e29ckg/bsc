@@ -60,15 +60,15 @@ AppAsset::register($this);
 	<?php $this->beginBody() ?>
 		
 	<?php
-Modal::begin([
-  'id' => 'activity-modal',
-   'header' => '<h4 class="modal-title">หนังสือ</h4>',
-   'size' => 'modal-lg',
-   'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">ปิด</a>',
-]);
-Modal::end();
-
-?>
+		Modal::begin([
+  			'id' => 'activity-modal',
+   			'header' => '<h4 class="modal-title"></h4>',
+   			'size' => 'modal-lg',
+   			// 'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">ปิด</a>',
+		]);
+		echo "<div id='modalContent'></div>";
+		Modal::end();
+	?>
                 
 		<!-- HEADER -->
 		<header id="header">
@@ -82,7 +82,6 @@ Modal::end();
 				<!-- Note: The activity badge color changes when clicked and resets the number to 0
 				Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
 				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
-
 				
 				</div>
 				<!-- END AJAX-DROPDOWN -->
@@ -246,9 +245,7 @@ Modal::end();
 		<div class="page-footer">
 				<?= $this->render('footer')?>
 		</div>
-		<!-- END PAGE FOOTER -->
-
-		
+		<!-- END PAGE FOOTER -->		
 
 		<!--================================================== -->
 		
@@ -271,9 +268,6 @@ Modal::end();
 		</script>
 
 <?php $this->endBody() ?>
-	</body>
-	
+	</body>	
 </html>
-
-
 <?php $this->endPage() ?>

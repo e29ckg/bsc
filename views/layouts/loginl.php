@@ -8,7 +8,6 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <!DOCTYPE html>
@@ -180,43 +179,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.min.js"></script>
 
-		<script type="text/javascript">
-			runAllForms();
-
-			$(function() {
-				// Validation
-				$("#login-form").validate({
-					// Rules for form validation
-					rules : {
-						email : {
-							required : true,
-							email : true
-						},
-						LoginForm[password] : {
-							required : true,
-							minlength : 3,
-							maxlength : 20
-						}
-					},
-
-					// Messages for form validation
-					messages : {
-						email : {
-							required : 'Please enter your email address',
-							email : 'Please enter a VALID email address'
-						},
-						password : {
-							required : 'Please enter your password'
-						}
-					},
-
-					// Do not change code below
-					errorPlacement : function(error, element) {
-						error.insertAfter(element.parent());
-					}
-				});
-			});
-		</script>
+		
 
 	</body>
 </html>

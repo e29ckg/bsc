@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
     <a herf= "#" class="btn btn-warning act-update" data-id="<?=$model->id?>"<i class="fa fa-pencil-square-o"></i> แก้ไข</a>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [

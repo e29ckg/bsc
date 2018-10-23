@@ -39,12 +39,12 @@ use yii\helpers\Html;
             [
 				'label' => 'PhpmyAdmin',
 				'url' => 'phpmyadmin',
-				'template' => '<a target="_blank" href="http://'.$_SERVER["SERVER_NAME"].'/{url}" title="{label}"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">{label}</span></a>',
+				'template' => '<a target="_blank" href="http://'.$_SERVER["HTTP_HOST"].'/{url}" title="{label}"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">{label}</span></a>',
 			],
 			[
 				'label' => 'SmartAdmin',
 				'url' => 'html',
-				'template' => '<a target="_blank" href="http://'.$_SERVER["SERVER_NAME"].'/{url}" title="{label}"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">{label}</span></a>',
+				'template' => '<a target="_blank" href="http://'.$_SERVER["HTTP_HOST"].'/{url}" title="{label}"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">{label}</span></a>',
 			],
         ],
     ],
