@@ -68,8 +68,8 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //s$this->layout = 'loginl';
-        //return $this->render('index');
-        return $this->render('test');
+        return $this->render('index');
+        //return $this->render('test');
     }
 
     /**
