@@ -13,7 +13,7 @@ use yii\helpers\ArrayHelper;
 /* @var $searchModel app\models\ProfileSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Contact';
+$this->title = Yii::t('app', 'Contact');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

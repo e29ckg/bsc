@@ -48,16 +48,17 @@ class Co extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'ชื่อ',
-            'photo' => 'รูปภาพ',
-            'dep' => 'ตำแหน่ง',
-            'email' => 'E-Mail',
-            'tel' => 'เบอร์โทรศัพท์',
-            'address' => 'ที่อยู่',
-            'comment' => 'หมายเหตุ',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'name'),
+            'photo' => Yii::t('app', 'photo'),
+            'dep' => Yii::t('app', 'dep'),
+            'email' => Yii::t('app', 'email'),
+            'tel' => Yii::t('app', 'tel'),
+            'address' => Yii::t('app', 'address'),
+            'comment' => Yii::t('app', 'comment'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
         ];
     }
 
