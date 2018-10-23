@@ -20,7 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php //var_dump($models)?>
 <?php// $_SERVER["HTTP_HOST"] ?>
-<?php//= $_SERVER["HTTP_HOST"].'/data/contact/' ?>
 <?php //Url::to('@web/uploads/contact/');?>
 <?php 
 $json = '';
@@ -83,12 +82,12 @@ $jsonDe = Json::decode($json);
 							<table id="datatable_fixed_column" class="table table-striped table-bordered" width="100%">
 								<thead>
 									<tr>
-					                    <th data-class="expand">Name</th>
-					                    <th>Image</th>
-					                    <th data-hide="phone">ชื่อ-สกุล</th>
+					                    <th data-class="expand">Id</th>
+					                    <th data-hide="phone,tablet">Image</th>
+					                    <th >ชื่อ-สกุล</th>
 					                    <th data-hide="phone">ตำแหน่ง</th>
 					                    <th data-hide="phone,tablet">เบอร์โทรศัพท์</th>
-					                    <th data-hide="phone,tablet">เครื่องมือ</th>
+					                    <th >เครื่องมือ</th>
 						            </tr>
 								</thead>
 								<tbody>
