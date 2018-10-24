@@ -21,6 +21,12 @@ use yii\helpers\Html;
 		'template' => '<a href="{url}" title="{label}"><i class="fa fa-lg fa-fw fa-phone"></i> <span class="menu-item-parent">{label}</span></a>',
 		
 	],
+	[
+		'label' => 'IDP',
+		'url' => ['/idp/index'],
+		'template' => '<a href="{url}" title="{label}"><i class="fa fa-lg fa-fw fa-phone"></i> <span class="menu-item-parent">{label}</span></a>',
+		
+	],
     [
 		'label' => 'Setting',  
 		'url' => ['#'],
