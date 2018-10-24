@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<?php var_dump($models2)?>
+<?php //var_dump($models)?>
 <?php// $_SERVER["HTTP_HOST"] ?>
 <?php //Url::to('@web/uploads/contact/');?>
 <?php 
@@ -105,7 +105,7 @@ $jsonDe = Json::decode($json);
 											</div>
 										</td>
 								        <td><?=$contact['name']?></td>
-								        <td><?=$contact['name']?></td>
+								        <td><?=$contact['date_idp']?></td>
 								        <td><a href="tel:<?=$contact['name']?>"><?=$contact['name']?></td>
 								        <td>
 											<a herf= "#" class="btn btn-warning act-update" data-id=<?=$contact['id']?>><i class="fa fa-pencil-square-o"></i> แก้ไข</a>
@@ -152,7 +152,7 @@ $(document).ready(function() {
        
 	function init_click_handlers(){        	
 		
-		var url_update = "index.php?r=co/update";
+		var url_update = "index.php?r=idp/update";
     	$(".act-update").click(function(e) {            
 			var fID = $(this).data("id");
 			// alert(fID);
@@ -164,7 +164,7 @@ $(document).ready(function() {
         	});
     	});
 
-    	var url_view = "index.php?r=co/view";		
+    	var url_view = "index.php?r=idp/view";		
     	$(".act-view").click(function(e) {			
                 var fID = $(this).data("id");
                 $.get(url_view,{id: fID},function (data){
@@ -239,7 +239,7 @@ $(document).ready(function() {
 /* END COLUMN FILTER */  
 
 
-			var url_create = "index.php?r=co/create";
+			var url_create = "index.php?r=idp/create";
     	$( "#act-create" ).click(function() {
         	$.get(url_create,function (data){
                 $("#activity-modal").find(".modal-body").html(data);

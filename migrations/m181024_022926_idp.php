@@ -21,8 +21,10 @@ class m181024_022926_idp extends Migration
         $this->createTable('idp_proj', [
             'id' => $this->primaryKey(),
             'name' => $this->string(50)->notNull()->unique(),
-            'date_idp' => $this->dateTime(),
+            // 'date_idp' => $this->dateTime(),
+            'date_idp' => $this->string(),
             'num' => $this->string(),
+            'comment' => $this->string(),
             'created_at' => $this->string(),
             'updated_at' => $this->string(),
         ], $tableOptions);

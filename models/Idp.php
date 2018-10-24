@@ -32,9 +32,8 @@ class Idp extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['name'],'unique','message'=>'Name already exist. Please try another one.'],
-            [['date_idp'], 'date'],
-            [['name', 'num', 'created_at', 'updated_at'], 'string', 'max' => 255],
-            [['photo'], 'file', 'extensions' => 'png, jpg', 'maxSize'=> 1024 * 1024 * 5],
+            // [['date_idp'], 'date'],
+            [['name', 'num', 'date_idp', 'created_at', 'updated_at','comment'], 'string', 'max' => 255],
         ];
     }
 
@@ -43,12 +42,14 @@ class Idp extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
-        return [           
-            
-    'id' => 'id',
-    'name' => 'name',
-    'date_idp' => 'date_idp',
-    'num' => 'num',
+        return [
+            'id' => '$this->primaryKey()',
+            'name' => 'ชื่อโครงการ',
+            'date_idp' => 'วันที่จัดโครงการ',
+            'num' => 'จำนวนชั่วโมง',
+            'comment' => 'รายละเอียด',
+            'created_at' => '$this->string()',
+            'updated_at' => '$this->string()',
         ];
     }
     

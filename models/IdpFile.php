@@ -31,8 +31,8 @@ class IdpFile extends \yii\db\ActiveRecord
     {
         return [
             [['name_file'], 'required'],
-            [['date_idp'], 'date'],
-            [['file_path'], 'string', 'max' => 255],
+           // [['date_idp'], 'date'],
+            [['file_path','name_file','date_idp','created_at', 'updated_at'], 'string', 'max' => 255],
             [['file_path'], 'file', 'extensions' => 'idp, png, jpg', 'maxSize'=> 1024 * 1024 * 10],
         ];
     }

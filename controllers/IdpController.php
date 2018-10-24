@@ -97,7 +97,7 @@ class IdpController extends Controller
     public function actionCreate() // md5(rand().time("now")
     {      
         $model = new Idp();
-
+        $model2 = new IdpFile();
         //Add This For Ajax Email Exist Validation 
         if(Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())){
             Yii::$app->response->format = Response::FORMAT_JSON;
@@ -105,23 +105,9 @@ class IdpController extends Controller
           } 
      
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            
-            $f = UploadedFile::getInstance($model, 'photo');
-            if(!empty($f)){
-                $dir = Url::to('@webroot/uploads/idp/');
-                if (!is_dir($dir)) {
-                    mkdir($dir, 0777, true);
-                }
-                $fileName = md5($f->baseName . time()) . '.' . $f->extension;
-                if($f->saveAs($dir . $fileName)){
-                    $model->photo = $fileName;
-                }               
-            } 
-            //$model->tel = implode (",",$model->tel);
-            // $model->tel = $model->tel[1];
-            $model->name = $_POST['Idp']['name'];
-            $model->created_at = time("now");
-            $model->updated_at = time("now");
+            $model->date_idp = date('Y-m-d H:i:s', time("now"));
+        //    echo "<script>alert('There are no fields to generate a report');</script>";
+            $model->created_at = 'strtotime(time("now"))';
             if($model->save()){
                return $this->redirect(['index']);
             }   
@@ -130,11 +116,13 @@ class IdpController extends Controller
         // $model->tel = explode(',', $model->tel);
         if(Yii::$app->request->isAjax){
             return $this->renderAjax('create',[
-                    'model' => $model,                    
+                    'model' => $model,
+                    'model2' => $model2,                    
             ]);
         }else{
             return $this->render('create',[
-                'model' => $model,                    
+                'model' => $model,
+                'model2' => $model2,                    
             ]); 
         }
     }    
