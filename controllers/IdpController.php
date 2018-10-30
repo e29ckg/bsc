@@ -125,7 +125,29 @@ class IdpController extends Controller
                 'model2' => $model2,                    
             ]); 
         }
-    }    
+    }   
+    
+    public function actionFileinsert() // md5(rand().time("now")
+    {      
+        $model = new Idp();
+        $model2 = new IdpFile();
+        return $this->renderAjax('_form_fileinsert',[
+            'model' => $model,
+            'model2' => $model2,                    
+        ]); 
+
+    }  
+
+    public function actionFileinsertsave() // md5(rand().time("now")
+    {      
+        $model = new Idp();
+        $model2 = new IdpFile();
+        return $this->renderAjax('_form_create',[
+            'model' => $model,
+            'model2' => $model2,                    
+        ]); 
+
+    }  
 
     /**
      * Updates an existing Profile model.
